@@ -55,6 +55,31 @@
     .btn-contact:hover {
       background-color: #e96a00;
     }
+    .navbar img {
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.6rem 0;
+  }
+
+  .navbar img {
+    width: 120px;
+  }
+
+  .navbar-collapse {
+    background: #ffffff;
+    padding: 15px;
+  }
+
+  .btn-contact {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
 
     /* =======================================================
        HERO SECTION
@@ -144,6 +169,7 @@
     .offset-md-1{
       margin-left: 0.333333%;
     }
+    
   
 
     /* Responsive */
