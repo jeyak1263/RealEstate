@@ -50,76 +50,21 @@
     /* =======================================================
        NAVBAR
     ======================================================= */
-    .navbar {
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      padding: 15px 0;
-      transition: all 0.3s ease;
-    }
-    
-    .navbar-brand {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--primary-blue);
-    }
-    
-    .navbar img {
-      width: 150px;
-      height: auto;
-    }
-    
-    .navbar-nav .nav-link {
-      color: var(--primary-blue);
-      font-weight: 500;
-      margin: 0 12px;
-      position: relative;
-    }
-    
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
-      color: var(--accent-orange);
-    }
-    
-    .navbar-nav .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: var(--accent-orange);
-      transition: width 0.3s ease;
-    }
-    
-    .navbar-nav .nav-link:hover::after,
-    .navbar-nav .nav-link.active::after {
-      width: 100%;
-    }
-    
-    .btn-contact {
-      background-color: var(--accent-orange);
-      color: white;
-      border-radius: 5px;
-      padding: 8px 20px;
-      font-weight: 500;
-      border: none;
-      transition: all 0.3s ease;
-    }
-    
-    .btn-contact:hover {
-      background-color: #e96a00;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .navbar-toggler {
-      border: none;
-      padding: 4px 8px;
-    }
-    
-    .navbar-toggler:focus {
-      box-shadow: none;
-    }
+   .navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #ff7b2e !important;
+}
+
+
     
     /* =======================================================
        HERO SECTION
@@ -364,7 +309,6 @@
     .about-images .top-img {
       width: 250px;
       height: 180px;
-      margin-bottom: 200px;
     }
     .about-images .center-img {
       width: 300px;
@@ -373,7 +317,6 @@
     .about-images .bottom-img {
       width: 250px;
       height: 180px;
-      margin-top: 200px;
     }
     
     .about-section h2 {
@@ -409,12 +352,10 @@
       display: inline-block;
       font-weight: 500;
     }
-    
     .about-btn:hover {
       background-color: var(--secondary-blue);
       color: #fff;
     }
-    
     /* =======================================================
        PROJECTS
     ======================================================= */
@@ -550,122 +491,144 @@
     /* =======================================================
        FOOTER
     ======================================================= */
-    .subscribe-footer {
-      background-color: var(--secondary-blue);
-      padding: 40px 0;
-      color: #fff;
-    }
-    
-    .footer-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    
-    /* Navigation Links */
-    .footer-nav {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .footer-nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    
-    .footer-nav a:hover {
-      color: var(--accent-orange);
-    }
-    
-    /* Subscribe Section */
-    .subscribe-box {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    
-    .subscribe-box span {
-      font-weight: 500;
-    }
-    
-    .subscribe-form {
-      display: flex;
-      border-radius: 10px;
-      overflow: hidden;
-      background-color: var(--light-bg);
-    }
-    
-    .subscribe-form input {
-      border: none;
-      padding: 10px 20px;
-      outline: none;
-      flex: 1;
-      font-size: 15px;
-      color: var(--dark-text);
-      min-width: 200px;
-      background-color:var(--secondary-blue);
-    }
-    
-    .subscribe-form button {
-      background-color: var(white);
-      border: none;
-      color: #153cd6;
-      font-weight: 600;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    
-    .subscribe-form button:hover {
-      background-color: #e96a00;
-    }
-    
-    .main-footer {
-      background: #000;
-      padding: 20px 0;
-      color: #fff;
-    }
-    
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    
-    .footer-inner p {
-      margin: 0;
-      font-size: 14px;
-    }
-    
-    .center-logo {
-      height: 40px;
-      width: auto;
-    }
-    
-    .social-icons {
-      display: flex;
-      gap: 15px;
-    }
-    
-    .social-icons a {
-      color: #fff;
-      font-size: 1.2rem;
-      transition: 0.3s;
-    }
-    
-    .social-icons a:hover {
-      color: var(--accent-orange);
-      transform: translateY(-3px);
-    }
+   /* ✅ SUBSCRIBE FOOTER SECTION */
+.subscribe-footer {
+  background-color: var(--secondary-blue);
+  padding: 40px 0;
+  color: #fff;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ✅ NAV LINKS */
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  color: var(--accent-orange);
+}
+
+/* ✅ SUBSCRIBE BOX */
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.subscribe-box span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* ✅ FORM */
+.subscribe-form {
+  display: flex;
+  overflow: hidden;
+  border-radius: 50px;
+  background: #fff;
+}
+
+.subscribe-form input {
+  border: none;
+  padding: 12px 20px;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  min-width: 260px;
+}
+
+/* ✅ FIXED BUTTON (Text now visible) */
+.subscribe-form button {
+  background-color: var(--primary-blue);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+  background-color: #d95f00;
+}
+
+/* ✅ BOTTOM FOOTER */
+.main-footer {
+  background: #000;
+  padding: 20px 0;
+  color: #fff;
+  margin-top: 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.center-logo {
+  height: 40px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--accent-orange);
+}
+
+/* ✅ RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subscribe-box {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .subscribe-form {
+    width: 100%;
+  }
+
+  .footer-nav {
+    justify-content: center;
+  }
+}
+
     
     /* =======================================================
        RESPONSIVE STYLES
@@ -794,27 +757,30 @@
   <!-- =======================================================
        NAVBAR
   ======================================================= -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/Frame 9 (2).png" alt="Real Trust Logo" />
-      </a>
+   <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+  <div class="container">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-      </button>
+    <a class="navbar-brand" href="#">
+      <img src="./assets/Frame 9 (2).png" alt="Logo" height="45">
+    </a>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link active" href="./Home.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-        </ul>
-        <a href="#contact" class="btn btn-contact">Contact</a>
-      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="./Home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+      </ul>
+
+      <a href="#" class="btn btn-warning">Contact</a>
     </div>
-  </nav>
+
+  </div>
+</nav>
 
   <!-- =======================================================
        HERO SECTION
@@ -967,7 +933,7 @@
       <div class="col-lg-3 col-md-6">
         <div class="project-card">
           <img src="./assets/Image.png" alt="Project 1">
-          <div class="card-body">
+          <div class="card-body p-4">
             <h5 class="text-primary">Consultation</h5>
             <p>Project Name, Location</p>
             <a href="#" class="btn">Read More</a>
@@ -979,7 +945,7 @@
       <div class="col-lg-3 col-md-6">
         <div class="project-card">
           <img src="./assets/Image (2).png" alt="Project 2">
-          <div class="card-body">
+          <div class="card-body p-4">
             <h5 class="text-primary">Design</h5>
             <p>Project Name, Location</p>
             <a href="#" class="btn">Read More</a>
@@ -991,7 +957,7 @@
       <div class="col-lg-3 col-md-6">
         <div class="project-card">
           <img src="./assets/Image (3).png" alt="Project 3">
-          <div class="card-body">
+          <div class="card-body p-4">
             <h5 class="text-primary">Marketing Design</h5>
             <p>Project Name, Location</p>
             <a href="#" class="btn">Read More</a>
@@ -1003,7 +969,7 @@
       <div class="col-lg-3 col-md-6">
         <div class="project-card">
           <img src="./assets/Image (4).png" alt="Project 4">
-          <div class="card-body">
+          <div class="card-body p-4">
             <h5 class="text-primary">Consultation & Marketing</h5>
             <p>Project Name, Location</p>
             <a href="#" class="btn">Read More</a>
@@ -1074,7 +1040,7 @@
   </section>
 
   <!-- =======================================================
-       FOOTER
+FOOTER
   ======================================================= -->
   <footer class="subscribe-footer" id="contact">
     <div class="container">
@@ -1105,7 +1071,8 @@
     <div class="container">
       <div class="footer-inner">
         <p>All Rights Reserved 2025</p>
-        <img src="./assets/Frame 9 (2).png" alt="Real Trust Logo" class="center-logo" />
+        <img src="./assets/Frame 9 (2).png
+        " alt="Real Trust Logo" class="center-logo" />
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
