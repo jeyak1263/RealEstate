@@ -4,16 +4,790 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Real Trust - Consultation, Design & Marketing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us Section</title>
-
-
+  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css">
+  
+  <style>
+    :root {
+      --primary-blue: #0d2c6c;
+      --secondary-blue: #2b7fff;
+      --accent-orange: #ff7a00;
+      --light-bg: #f8f9fa;
+      --dark-text: #333;
+      --light-text: #fff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      color: var(--primary-blue);
+    }
+    
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    /* =======================================================
+       NAVBAR
+    ======================================================= */
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+    }
+    
+    .navbar img {
+      width: 150px;
+      height: auto;
+    }
+    
+    .navbar-nav .nav-link {
+      color: var(--primary-blue);
+      font-weight: 500;
+      margin: 0 12px;
+      position: relative;
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--accent-orange);
+    }
+    
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent-orange);
+      transition: width 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .btn-contact {
+      background-color: var(--accent-orange);
+      color: white;
+      border-radius: 5px;
+      padding: 8px 20px;
+      font-weight: 500;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-contact:hover {
+      background-color: #e96a00;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-toggler {
+      border: none;
+      padding: 4px 8px;
+    }
+    
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    
+    /* =======================================================
+       HERO SECTION
+    ======================================================= */
+    .hero {
+      position: relative;
+      background:url('./assets/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home\ 1.png') center/cover no-repeat;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      color: var(--light-text);
+      overflow: hidden;
+      padding-top: 80px;
+
+    }
+    
+    .hero-content {
+      z-index: 1;
+    }
+    
+   .hero {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.hero h1{
+      font-size: 4.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--light-text);
+    margin-bottom: 20px;
+
+}
+
+/* Consultation Box */
+.consultation-box {
+  width: 100%;
+  max-width: 380px;
+  background: #0f2660;
+  padding: 40px 35px;
+  border-radius: 10px;
+  text-align: center;
+  border: 8px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  margin-top: 90px;
+}
+
+.consultation-box h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Input fields */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 18px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button */
+.consult-btn {
+  width: 100%;
+  background: #ff7b2e;
+  padding: 14px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+.consult-btn:hover {
+  background: #e0610f;
+}
+
+    /* =======================================================
+       REALTOR SECTION
+    ======================================================= */
+    .realtor-section {
+      padding: 80px 0;
+      background-color: var(--light-bg);
+    }
+    
+    .realtor-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      background: url(./assets/Frame\ 17.png) center/cover no-repeat;
+    }
+    
+    .realtor-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .realtor-title {
+      color: var(--secondary-blue);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
+    
+    .realtor-desc {
+      font-size: 1.1rem;
+      color: var(--dark-text);
+      line-height: 1.4;
+      padding-right: 35px;
+    }
+    
+    .realtor-images {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      min-width: 300px;
+      
+    }
+    
+    .realtor-images .img {
+      flex: 1;
+    }
+    
+    .realtor-images .img img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 150px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .realtor-images .img_two {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .realtor-images .img_two img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 100px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* =======================================================
+       WHY CHOOSE US
+    ======================================================= */
+    .choose-us {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+    
+    .choose-us h2 {
+      font-weight: 700;
+      color: var(--secondary-blue);
+      margin-bottom: 15px;
+    }
+    
+    .underline {
+      width: 120px;
+      height: 6px;
+      background-color: var(--secondary-blue);
+      border-radius: 10px;
+      margin: 0 auto 50px;
+    }
+    
+    .feature-box {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      height: 100%;
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-box .icon {
+      background-color: rgba(43, 127, 255, 0.1);
+      color: var(--secondary-blue);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+    }
+    
+    .feature-box .icon img {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .feature-box h4 {
+      color: var(--secondary-blue);
+      margin-bottom: 15px;
+    }
+    
+    .feature-box p {
+      color: #666;
+    }
+    
+    /* =======================================================
+       ABOUT US
+    ======================================================= */
+    .about-section {
+      position: relative;
+      padding: 8px 10px 0px 52px;
+      background: url('./assets/Frame\ 16.png') center/cover no-repeat;
+      text-align: center;
+    }
+    
+    .about-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .about-images img {
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .about-images .top-img {
+      width: 250px;
+      height: 180px;
+      margin-bottom: 200px;
+    }
+    .about-images .center-img {
+      width: 300px;
+      height: 220px;
+    }
+    .about-images .bottom-img {
+      width: 250px;
+      height: 180px;
+      margin-top: 200px;
+    }
+    
+    .about-section h2 {
+      color: var(--secondary-blue);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .about-section .divider {
+      width: 120px;
+      height: 4px;
+      background-color: var(--secondary-blue);
+      margin: 0 auto 25px;
+      border-radius: 2px;
+    }
+    
+    .about-section p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    
+    .about-btn {
+      background-color: transparent;
+      border: 2px solid var(--secondary-blue);
+      color: var(--secondary-blue);
+      padding: 10px 35px;
+      border-radius: 30px;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 500;
+    }
+    
+    .about-btn:hover {
+      background-color: var(--secondary-blue);
+      color: #fff;
+    }
+    
+    /* =======================================================
+       PROJECTS
+    ======================================================= */
+ .projects {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card .btn {
+  background: #ff7b2e;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background: #e0610f;
+}
+
+    /* =======================================================
+       HAPPY CLIENTS
+    ======================================================= */
+    .clients {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+    
+    .clients .section-title {
+      color: var(--secondary-blue);
+      font-weight: 700;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .client-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      height: 100%;
+    }
+    
+    .client-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .client-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid var(--secondary-blue);
+    }
+    
+    .client-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .client-name {
+      color: var(--secondary-blue);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    
+    .client-position {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    
+    /* =======================================================
+       BACKGROUND SECTION (Learn More)
+    ======================================================= */
+    .cta-section {
+      position: relative;
+      background: linear-gradient( rgba(13, 44, 108, 0.8)), url('./assets/Mask\ group.png') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+    
+    .cta-section h4 {
+      font-size: 2.3rem;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    
+    .cta-section .btn-light {
+      background-color: #fff;
+      border: none;
+      color: var(--secondary-blue);
+      font-weight: 600;
+      padding: 12px 75px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    
+    .cta-section .btn-light:hover {
+      background-color: var(--accent-orange);
+      color: #fff;
+    }
+    
+    /* =======================================================
+       FOOTER
+    ======================================================= */
+    .subscribe-footer {
+      background-color: var(--secondary-blue);
+      padding: 40px 0;
+      color: #fff;
+    }
+    
+    .footer-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    /* Navigation Links */
+    .footer-nav {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .footer-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    
+    .footer-nav a:hover {
+      color: var(--accent-orange);
+    }
+    
+    /* Subscribe Section */
+    .subscribe-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .subscribe-box span {
+      font-weight: 500;
+    }
+    
+    .subscribe-form {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: var(--light-bg);
+    }
+    
+    .subscribe-form input {
+      border: none;
+      padding: 10px 20px;
+      outline: none;
+      flex: 1;
+      font-size: 15px;
+      color: var(--dark-text);
+      min-width: 200px;
+      background-color:var(--secondary-blue);
+    }
+    
+    .subscribe-form button {
+      background-color: var(white);
+      border: none;
+      color: #153cd6;
+      font-weight: 600;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .subscribe-form button:hover {
+      background-color: #e96a00;
+    }
+    
+    .main-footer {
+      background: #000;
+      padding: 20px 0;
+      color: #fff;
+    }
+    
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .footer-inner p {
+      margin: 0;
+      font-size: 14px;
+    }
+    
+    .center-logo {
+      height: 40px;
+      width: auto;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-icons a {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: var(--accent-orange);
+      transform: translateY(-3px);
+    }
+    
+    /* =======================================================
+       RESPONSIVE STYLES
+    ======================================================= */
+    @media (max-width: 1200px) {
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .realtor-title {
+        font-size: 2rem;
+      }
+      
+      .about-images .top-img,
+      .about-images .center-img,
+      .about-images .bottom-img {
+        width: 200px;
+        height: 150px;
+      }
+      
+      .footer-container,
+      .footer-inner {
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .footer-nav {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 10px 0;
+      }
+      
+      .navbar img {
+        width: 120px;
+      }
+      
+      .hero {
+        padding: 100px 0 40px;
+        text-align: center;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      
+      .consultation-box {
+        margin-top: 30px;
+        max-width: 100%;
+      }
+      
+      .realtor-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .realtor-images {
+        flex-direction: column;
+      }
+      
+      .about-images {
+        flex-direction: column;
+      }
+      
+      .about-images .top-img,
+      .about-images .center-img,
+      .about-images .bottom-img {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+      }
+      
+      .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .subscribe-box {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .subscribe-form {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .footer-inner {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+      
+      .realtor-title {
+        font-size: 1.8rem;
+      }
+      
+      .choose-us h2,
+      .projects h2,
+      .clients .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .cta-section h4 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -22,21 +796,22 @@
   ======================================================= -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <img src="./assets/Frame 9 (2).png" alt="Logo" />
-
+      <a class="navbar-brand" href="#">
+        <img src="./assets/Frame 9 (2).png" alt="Real Trust Logo" />
+      </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link active" href="./Home.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
         </ul>
-        <a href="#" class="btn btn-contact">Contact</a>
+        <a href="#contact" class="btn btn-contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -44,52 +819,26 @@
   <!-- =======================================================
        HERO SECTION
   ======================================================= -->
- <section class="hero">
-    <div class="container">
-      <div class="row align-items-center">
-        
-        <!-- Left Text -->
-        <div class="col-md-6 hero-content">
-          <h1>Consultation,<br>Design & Marketing</h1>
-        </div>
-
-        <!-- Right Form -->
-        <div class="col-md-5 offset-md-1">
-          <div class="consultation-box">
-            <h4>Get a Free Consultation</h4>
-            <form>
-              <input type="text" class="form-control" placeholder="Full Name" required>
-              <input type="email" class="form-control" placeholder="Enter Email Address" required>
-              <input type="tel" class="form-control" placeholder="Mobile Number" required>
-              <input type="text" class="form-control" placeholder="Area, City" required>
-              <button type="submit">Get Quick Quote</button>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
- <section class="realtor-section">
+  <section class="hero py-5">
   <div class="container">
-    <div class="realtor-wrapper">
+    <div class="row align-items-center">
 
-      <div class="realtor-text mb-4 mb-md-0">
-        <h1 class="realtor-title">Not Your Average Realtor</h1>
-        <p class="realtor-desc">
-          Real Trust has an eye for seeing property potential, coordinating top
-          dollar on their sales, and delivering unmatched real estate solutions.
-        </p>
+      <!-- Left Text -->
+      <div class="col-lg-6 col-md-12 hero-content mb-4 mb-lg-0">
+        <h1>Consultation,<br>Design & Marketing</h1>
       </div>
 
-      <div class="realtor-images d-flex align-items-center">
-        <div class="img me-3">
-          <img src="./assets/Ellipse 11.png" alt="Client 1" />
-        </div>
+      <!-- Right Form -->
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+        <div class="consultation-box">
+          <h2 class="text-light">Get a Free Consultation</h2>
 
-        <div class="img_two d-flex flex-column gap-3">
-          <img src="./assets/Ellipse 12.png" alt="Client 2" />
-          <img src="./assets/Ellipse 13.png" alt="Client 3" />
+          <input type="text" class="input-field" placeholder="Full Name">
+          <input type="email" class="input-field" placeholder="Enter Email Address">
+          <input type="text" class="input-field" placeholder="Mobile Number">
+          <input type="text" class="input-field" placeholder="Area, City">
+
+          <button class="consult-btn">Get Quick Quote</button>
         </div>
       </div>
 
@@ -98,84 +847,103 @@
 </section>
 
 
+  <!-- =======================================================
+       REALTOR SECTION
+  ======================================================= -->
+  <section class="realtor-section">
+    <div class="container">
+      <div class="realtor-wrapper">
 
-
+        <div class="realtor-text">
+          <h1 class="realtor-title">Not Your Average Realtor</h1>
+          <p class="realtor-desc">
+            Real Trust has an eye for seeing property potential, coordinating top
+            dollar on their sales, and delivering unmatched real estate solutions.
+            <br>
+            Our team combines market expertise with innovative strategies to ensure
+            your real estate journey is seamless and successful.
+          </p>
         </div>
 
+        <div class="realtor-images">
+          <div class="img">
+            <img src="./assets/Ellipse 11.png" alt="Happy Client" />
+          </div>
+
+          <div class="img_two">
+            <img src="./assets/Ellipse 12.png" alt="Property" />
+            <img src="./assets/Ellipse 13.png" alt="Modern Home" />
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- =======================================================
        WHY CHOOSE US
   ======================================================= -->
-  <section class="choose-us py-5 text-center">
-  <div class="container">
-    <h2 class="fw-bold text-primary mb-3">Why Choose Us?</h2>
-    <div class="underline mx-auto mb-5"></div>
+  <section class="choose-us py-5 text-center" id="services">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Why Choose Us?</h2>
+      <div class="underline mx-auto mb-5"></div>
 
-    <div class="row-1 g-4">
-      <div class="col-md-4">
-        <div class="feature-box p-4">
-          <div class="icon mb-3">
-            <i class="fa-solid fa-house-chimney">
-              <img src="./assets/home.png" alt="">
-            </i>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="icon">
+              <img src="./assets/home.png" alt="Home Icon">
+            </div>
+            <h4 class="fw-semibold">Potential ROI</h4>
+            <p class="mt-3">
+              Whether you are looking to buy a fixer-upper or renovate your current home for sale,
+              we will walk you through potential returns for projects.
+            </p>
           </div>
-          <h4 class="fw-semibold text-primary">Potential ROI</h4>
-          <p class="text-muted mt-3">
-            Whether you are looking to buy a fixer-upper or renovate your current home for sale,
-            we will walk you through potential returns for projects.
-          </p>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="feature-box p-4">
-          <div class="icon mb-3">
-            <i class="fa-solid fa-paint-roller">
-              <img src="./assets/Group 1000001657.png" alt="">
-            </i>
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="icon">
+              <img src="./assets/Group 1000001657.png" alt="Design Icon">
+            </div>
+            <h4 class="fw-semibold">Design</h4>
+            <p class="mt-3">
+              Our background in interior design makes the perfect guide through your design options
+              and coordinating contractors to complete the home upgrade.
+            </p>
           </div>
-          <h4 class="fw-semibold text-primary">Design</h4>
-          <p class="text-muted mt-3">
-            Our background in interior design makes the perfect guide through your design options
-            and coordinating contractors to complete the home upgrade.
-          </p>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="feature-box p-4">
-          <div class="icon mb-3">
-            <i class="fa-solid fa-dollar-sign">
-              <img src="./assets/circle-dollar-sign.png" alt="">
-            </i>
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-box">
+            <div class="icon">
+              <img src="./assets/circle-dollar-sign.png" alt="Marketing Icon">
+            </div>
+            <h4 class="fw-semibold">Marketing</h4>
+            <p class="mt-3">
+              Staging consultation, professional photos and a sophisticated digital marketing plan
+              accompany every listing to reach today's buyers.
+            </p>
           </div>
-          <h4 class="fw-semibold text-primary">Marketing</h4>
-          <p class="text-muted mt-3">
-            Staging consultation, professional photos and a sophisticated digital marketing plan
-            accompany every listing to reach today’s buyers.
-          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-   <!-- ABOUT US -->
+  <!-- =======================================================
+       ABOUT US
+  ======================================================= -->
   <section class="about-section">
     <div class="container">
-      <div class="corner-box top-left orange"></div>
-      <div class="corner-box top-right"></div>
-      <div class="corner-box bottom-left orange"></div>
-<div class="about-images">
-  <img src="./assets/pexels-brett-sayles-2881232.png" alt="Top" class="top-img">
-  <img src="./assets/pexels-fauxels-3182834.png" alt="Center" class="center-img">
-  <img src="./assets/Image (5).png" alt="Bottom" class="bottom-img">
-</div>
-
+      <div class="about-images">
+        <img src="./assets/Image.png" alt="Modern House" class="top-img">
+        <img src="./assets/Image (4).png" alt="Luxury Home" class="center-img">
+        <img src="./assets/Image (5).png" alt="Interior Design" class="bottom-img">
+      </div>
 
       <h2>About Us</h2>
-      <img src="./assets/Rectangle 58.png"alt="" style="width: 188px; height:20px; padding:6px">
+      <div class="divider"></div>
       <p>Fifteen years of experience in real estate, excellent customer service, and a commitment to work hard,
         listen, and follow through. We provide quality service to build relationships with clients and, more
         importantly, maintain those relationships by communicating effectively.</p>
@@ -186,94 +954,60 @@
   <!-- =======================================================
        PROJECTS
   ======================================================= -->
-  <section class="projects">
-    <div class="container">
-      <h2>Our Projects</h2>
-      <p class="section-desc">
-        We know what buyers are looking for and suggest projects that will bring clients top dollar for the sale of their homes.
-      </p>
+  <section class="projects" id="projects">
+  <div class="container">
+    <h2 class="text-primary">Our Projects</h2>
+    <p class="section-desc">
+      We know what buyers are looking for and suggest projects that will bring clients top dollar for the sale of their homes.
+    </p>
 
-      <div class="row">
-        <div class="col-md-3">
-          <div class="project-card">
-            <img src="./assets/Image (1).png" alt="Project 1">
-            <h6>Consultation</h6>
-            <p>Project Name, Location</p>
-            <a href="#" class="btn">Read More</a>
-          </div>
-        </div>
+    <div class="row g-4 justify-content-center">
 
-        <div class="col-md-3">
-          <div class="project-card">
-            <img src="./assets/Image (2).png" alt="Project 2">
-            <h6>Design</h6>
-            <p>Project Name, Location</p>
-            <a href="#" class="btn">Read More</a>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="project-card">
-            <img src="./assets/Image (3).png" alt="Project 3">
-            <h6>Marketing Design</h6>
-            <p>Project Name, Location</p>
-            <a href="#" class="btn">Read More</a>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="project-card">
-            <img src="./assets/Image (4).png" alt="Project 4">
-            <h6>Consultation & Marketing</h6>
+      <!-- Project 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="project-card">
+          <img src="./assets/Image.png" alt="Project 1">
+          <div class="card-body">
+            <h5 class="text-primary">Consultation</h5>
             <p>Project Name, Location</p>
             <a href="#" class="btn">Read More</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- =======================================================
-       HAPPY CLIENTS
-  ======================================================= -->
-  <section class="clients py-5">
-  <div class="container text-center">
-    <h2 class="section-title">Happy Clients</h2>
-
-    <div class="row mt-5">
-      <div class="col-md-3 col-6 mb-4">
-        <div class="client-card">
-          <img src="./assets/Ellipse 29.png" alt="Client 1">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          <h4 class="client-name">Rowhan Smith</h4>
-          <strong class="client-position">- Rakesh Jain</strong>
+      <!-- Project 2 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="project-card">
+          <img src="./assets/Image (2).png" alt="Project 2">
+          <div class="card-body">
+            <h5 class="text-primary">Design</h5>
+            <p>Project Name, Location</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-3 col-6 mb-4">
-        <div class="client-card">
-          <img src="./assets/Ellipse 28.png" alt="Client 2">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          <h4 class="client-name">Shipara Kayak</h4>
-          <strong class="client-position">- Priya Mehta</strong>
+      <!-- Project 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="project-card">
+          <img src="./assets/Image (3).png" alt="Project 3">
+          <div class="card-body">
+            <h5 class="text-primary">Marketing Design</h5>
+            <p>Project Name, Location</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-3 col-6 mb-4">
-        <div class="client-card">
-          <img src="./assets/Ellipse 31.png" alt="Client 3">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          <h4 class="client-name">John Lepore</h4>
-          <strong class="client-position">- Arjun Nair</strong>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-6 mb-4">
-        <div class="client-card">
-          <img src="./assets/Ellipse 33.png" alt="Client 4">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-          <h4 class="client-name">Marry Freeman</h4>
-          <strong class="client-position">- Sneha Rao</strong>
+      <!-- Project 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="project-card">
+          <img src="./assets/Image (4).png" alt="Project 4">
+          <div class="card-body">
+            <h5 class="text-primary">Consultation & Marketing</h5>
+            <p>Project Name, Location</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
         </div>
       </div>
     </div>
@@ -281,57 +1015,109 @@
 </section>
 
 
+
+  <!-- =======================================================
+       HAPPY CLIENTS
+  ======================================================= -->
+  <section class="clients py-5" id="testimonials">
+    <div class="container text-center">
+      <h2 class="section-title">Happy Clients</h2>
+
+      <div class="row mt-5 g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="client-card">
+            <img src="./assets/Image (1).png" alt="Client 1">
+            <p>"Working with Real Trust was an exceptional experience. They helped us find our dream home within our budget and made the entire process smooth."</p>
+            <h4 class="client-name">Rowhan Smith</h4>
+            <strong class="client-position">- Rakesh Jain</strong>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="client-card">
+            <img src="./assets/Image (2).png" alt="Client 2">
+            <p>"The team at Real Trust provided excellent guidance throughout our home selling process. Their marketing strategy got us multiple offers above asking price."</p>
+            <h4 class="client-name">Shipara Kayak</h4>
+            <strong class="client-position">- Priya Mehta</strong>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="client-card">
+            <img src="./assets/Image (3).png" alt="Client 3">
+            <p>"As a first-time home buyer, I was nervous about the process. Real Trust made everything understandable and helped me find the perfect starter home."</p>
+            <h4 class="client-name">John Lepore</h4>
+            <strong class="client-position">- Arjun Nair</strong>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="client-card">
+            <img src="./assets/Image (4).png" alt="Client 4">
+            <p>"Their design consultation completely transformed our property. We sold our home in just 2 weeks for 15% above the initial valuation."</p>
+            <h4 class="client-name">Marry Freeman</h4>
+            <strong class="client-position">- Sneha Rao</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- =======================================================
        BACKGROUND SECTION
   ======================================================= -->
-  <section class="_two">
+  <section class="cta-section">
     <div class="container">
-      <h4 style="line-height: 2em;">Learn more about our listing process, as well as our additional staging and design work </h4>
+      <h4 class="text-light">Learn more about our listing process, as well as our additional staging and design work</h4>
       <a href="#" class="btn btn-light mt-3">Learn More</a>
     </div>
   </section>
 
   <!-- =======================================================
-     FOOTER
-======================================================= -->
-<footer class="subscribe-footer">
-    <div class="footer-container">
-      <!-- Navigation Links -->
-      <ul class="footer-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+       FOOTER
+  ======================================================= -->
+  <footer class="subscribe-footer" id="contact">
+    <div class="container">
+      <div class="footer-container">
+        <!-- Navigation Links -->
+        <ul class="footer-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-      <!-- Subscribe Box -->
-      <div class="subscribe-box">
-        <span>Subscribe Us</span>
-        <form class="subscribe-form">
-          <input type="email" placeholder="Enter Email Address" required style="background-color: #2578f5; color:#ffffff">
-          <button type="submit">Subscribe</button>
-        </form>
+        <!-- Subscribe Box -->
+        <div class="subscribe-box">
+          <span>Subscribe Us</span>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Enter Email Address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
     </div>
   </footer>
 
-    <!-- Footer -->
-  <footer class="point_container">
-    <div class="footer-inner">
-      <p>All Rights Reserved 2025</p>
-      <img src="./assets/Frame 9 (2).png" alt="Logo" class="center-logo" />
-      <div class="social-icons">
-      <span><img src="./assets/facebook.png" alt=""></span>
-      <span><img src="./assets/instagram.png" alt=""></span>
-      <span><img src="./assets/Linkedin.png" alt=""></span>
-      <span><img src="./assets/Twitter.png" alt=""></span>
-    </div>
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>All Rights Reserved 2025</p>
+        <img src="./assets/Frame 9 (2).png" alt="Real Trust Logo" class="center-logo" />
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
 
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
