@@ -487,151 +487,6 @@
       background-color: var(--accent-orange);
       color: #fff;
     }
-    
-    /* =======================================================
-       FOOTER
-    ======================================================= */
-   /* ✅ SUBSCRIBE FOOTER SECTION */
-.subscribe-footer {
-  background-color: var(--secondary-blue);
-  padding: 40px 0;
-  color: #fff;
-}
-
-.footer-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* ✅ NAV LINKS */
-.footer-nav {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-}
-
-.footer-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.footer-nav a:hover {
-  color: var(--accent-orange);
-}
-
-/* ✅ SUBSCRIBE BOX */
-.subscribe-box {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-   padding-left: 55px;
-}
-
-.subscribe-box span {
-  font-weight: 600;
-  font-size: 18px;
-  padding-right: 50px;
-}
-
-/* ✅ FORM */
-.subscribe-form {
-  display: flex;
-  overflow: hidden;
-  border-radius: 50px;
-  background: #fff;
-}
-
-.subscribe-form input {
-  border: none;
-  padding: 12px 16px;
-  outline: none;
-  flex: 1;
-  font-size: 15px;
-  min-width: 180px;
-}
-
-/* ✅ FIXED BUTTON (Text now visible) */
-.subscribe-form button {
-  background-color: var(--primary-blue);
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  padding: 12px 25px 10px 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.subscribe-form button:hover {
-  background-color: #d95f00;
-}
-
-/* ✅ BOTTOM FOOTER */
-.main-footer {
-  background: #000;
-  padding: 20px 0;
-  color: #fff;
-  margin-top: 0;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.center-logo {
-  height: 40px;
-}
-
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.social-icons a {
-  color: #fff;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: var(--accent-orange);
-}
-
-/* ✅ RESPONSIVE FIX */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .subscribe-box {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .subscribe-form {
-    width: 100%;
-  }
-
-  .footer-nav {
-    justify-content: center;
-  }
-}
-
-    
     /* =======================================================
        RESPONSIVE STYLES
     ======================================================= */
@@ -1044,46 +899,79 @@
   <!-- =======================================================
 FOOTER
   ======================================================= -->
-  <footer class="subscribe-footer" id="contact">
-    <div class="container">
-      <div class="footer-container">
-        <!-- Navigation Links -->
-        <ul class="footer-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+ <footer class="footer bg-black text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Logo + Description -->
+      <div class="col-12 col-md-4 logo-light">
+        <img src="./assets/Frame 9 (2).png" alt="Logo" class="footer-logo mb-3">
+
+        <p class="footer-text">
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+          fugit sed consequuntur magni dolores eos qui ratione.
+        </p>
+
+        <!-- Social icons -->
+        <div class="social-icons mt-3">
+          <span><img src="./assets/facebook.png" alt=""></span>
+          <span><img src="./assets/instagram.png" alt=""></span>
+          <span><img src="./assets/Linkedin.png" alt=""></span>
+          <span><img src="./assets/Twitter.png" alt=""></span>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-6 col-md-2">
+        <h5 class="footer-title text-info">Contact</h5>
+        <p class="footer-info">(629) 555-0129</p>
+        <p class="footer-info">info@example.com</p>
+        <p class="footer-info">6391 Elgin St. Celina, 10299</p>
+      </div>
+
+      <!-- Page -->
+      <div class="col-6 col-md-2">
+        <h5 class="footer-title text-info">Page</h5>
+        <ul class="footer-list">
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Blogs</li>
+          <li>Service</li>
         </ul>
+      </div>
 
-        <!-- Subscribe Box -->
-        <div class="subscribe-box">
-          <span class="text-center">Subscribe Us</span>
-          <form class="subscribe-form">
-            <input type="email" placeholder="Enter Email Address" required>
-            <button type="submit">Subscribe</button>
-          </form>
+      <!-- Quick Links -->
+      <div class="col-6 col-md-2">
+        <h5 class="footer-title text-info">Quick links</h5>
+        <ul class="footer-list">
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+          <li>FAQs</li>
+          <li>Support Center</li>
+        </ul>
+      </div>
+
+      <!-- Subscribe -->
+      <div class="col-12 col-md-2">
+        <h5 class="footer-title text-info">Subscribe</h5>
+        <div class="input-group subscribe-box">
+          <input type="email" class="form-control" placeholder="Get product updates">
+          <button class="btn btn-primary subscribe-btn">
+            <img alt="Content" src="./assets/ic Arrow Go.png"  />
+          </button>
         </div>
       </div>
-    </div>
-  </footer>
 
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <p>All Rights Reserved 2025</p>
-        <img src="./assets/Frame 9 (2).png
-        " alt="Real Trust Logo" class="center-logo" />
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
     </div>
-  </footer>
+
+    <hr class="footer-line">
+
+    <p class="text-center copyright-text">
+      © 2025 Copyright, All rights reserved.
+    </p>
+  </div>
+</footer>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
