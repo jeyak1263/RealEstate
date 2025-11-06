@@ -1,0 +1,738 @@
+ :root {
+      --primary-blue: #0d2c6c;
+      --secondary-blue: #2b7fff;
+      --accent-orange: #ff7a00;
+      --light-bg: #f8f9fa;
+      --dark-text: #333;
+      --light-text: #fff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      color: var(--primary-blue);
+    }
+    
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    /* =======================================================
+       NAVBAR
+    ======================================================= */
+   .navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #ff7b2e !important;
+}
+
+
+    
+    /* =======================================================
+       HERO SECTION
+    ======================================================= */
+    .hero {
+      position: relative;
+      background:url('./assets/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home\ 1.png') center/cover no-repeat;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      color: var(--light-text);
+      overflow: hidden;
+      padding-top: 80px;
+
+    }
+    
+    .hero-content {
+      z-index: 1;
+    }
+    
+   .hero {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.hero h1{
+      font-size: 4.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--light-text);
+    margin-bottom: 20px;
+
+}
+
+/* Consultation Box */
+.consultation-box {
+  width: 100%;
+  max-width: 380px;
+  background: #0f2660;
+  padding: 40px 35px;
+  border-radius: 10px;
+  text-align: center;
+  border: 8px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  margin-top: 90px;
+}
+
+.consultation-box h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Input fields */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 18px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button */
+.consult-btn {
+  width: 100%;
+  background: #ff7b2e;
+  padding: 14px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+.consult-btn:hover {
+  background: #e0610f;
+}
+
+    /* =======================================================
+       REALTOR SECTION
+    ======================================================= */
+    .realtor-section {
+      padding: 80px 0;
+      background-color: var(--light-bg);
+    }
+    
+    .realtor-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      background: url(./assets/Frame\ 17.png) center/cover no-repeat;
+    }
+    
+    .realtor-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .realtor-title {
+      color: var(--secondary-blue);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
+    
+    .realtor-desc {
+      font-size: 1.1rem;
+      color: var(--dark-text);
+      line-height: 1.4;
+      padding-right: 35px;
+    }
+    
+    .realtor-images {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      min-width: 300px;
+      
+    }
+    
+    .realtor-images .img {
+      flex: 1;
+    }
+    
+    .realtor-images .img img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 150px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .realtor-images .img_two {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .realtor-images .img_two img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 100px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* =======================================================
+       WHY CHOOSE US
+    ======================================================= */
+    .choose-us {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+    
+    .choose-us h2 {
+      font-weight: 700;
+      color: var(--secondary-blue);
+      margin-bottom: 15px;
+    }
+    
+    .underline {
+      width: 120px;
+      height: 6px;
+      background-color: var(--secondary-blue);
+      border-radius: 10px;
+      margin: 0 auto 50px;
+    }
+    
+    .feature-box {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      height: 100%;
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-box .icon {
+      background-color: rgba(43, 127, 255, 0.1);
+      color: var(--secondary-blue);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+    }
+    
+    .feature-box .icon img {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .feature-box h4 {
+      color: var(--secondary-blue);
+      margin-bottom: 15px;
+    }
+    
+    .feature-box p {
+      color: #666;
+    }
+    
+    /* =======================================================
+       ABOUT US
+    ======================================================= */
+    .about-section {
+      position: relative;
+      padding: 10px 52px 0px 52px;
+      background: url('./assets/Frame\ 16.png') center/cover no-repeat;
+      text-align: center;
+    }
+    
+    .about-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .about-images img {
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .about-images .top-img {
+      width: 250px;
+      height: 180px;
+    }
+    .about-images .center-img {
+      width: 300px;
+      height: 220px;
+    }
+    .about-images .bottom-img {
+      width: 250px;
+      height: 180px;
+    }
+    
+    .about-section h2 {
+      color: var(--secondary-blue);
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .about-section .divider {
+      width: 120px;
+      height: 4px;
+      background-color: var(--secondary-blue);
+      margin: 0 auto 25px;
+      border-radius: 2px;
+    }
+    
+    .about-section p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    
+    .about-btn {
+      background-color: transparent;
+      border: 2px solid var(--secondary-blue);
+      color: var(--secondary-blue);
+      padding: 10px 35px;
+      border-radius: 30px;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 500;
+    }
+    .about-btn:hover {
+      background-color: var(--secondary-blue);
+      color: #fff;
+    }
+    /* =======================================================
+       PROJECTS
+    ======================================================= */
+ .projects {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card .btn {
+  background: #ff7b2e;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background: #e0610f;
+}
+
+    /* =======================================================
+       HAPPY CLIENTS
+    ======================================================= */
+    .clients {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+    
+    .clients .section-title {
+      color: var(--secondary-blue);
+      font-weight: 700;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .client-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      height: 100%;
+    }
+    
+    .client-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .client-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid var(--secondary-blue);
+    }
+    
+    .client-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .client-name {
+      color: var(--secondary-blue);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    
+    .client-position {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    
+    /* =======================================================
+       BACKGROUND SECTION (Learn More)
+    ======================================================= */
+    .cta-section {
+      position: relative;
+      background: linear-gradient( rgba(13, 44, 108, 0.8)), url('./assets/Mask\ group.png') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+    
+    .cta-section h4 {
+      font-size: 2.3rem;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    
+    .cta-section .btn-light {
+      background-color: #fff;
+      border: none;
+      color: var(--secondary-blue);
+      font-weight: 600;
+      padding: 12px 75px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    
+    .cta-section .btn-light:hover {
+      background-color: var(--accent-orange);
+      color: #fff;
+    }
+    
+    /* =======================================================
+       FOOTER
+    ======================================================= */
+   /* ✅ SUBSCRIBE FOOTER SECTION */
+.subscribe-footer {
+  background-color: var(--secondary-blue);
+  padding: 40px 0;
+  color: #fff;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ✅ NAV LINKS */
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  padding: 10px 20px 10px 10px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  color: var(--accent-orange);
+}
+
+/* ✅ SUBSCRIBE BOX */
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.subscribe-box span {
+  font-weight: 600;
+  font-size: 18px;
+  padding-right: 12px;
+}
+
+/* ✅ FORM */
+.subscribe-form {
+  display: flex;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #f39a0d;
+}
+
+.subscribe-form input {
+  border: none;
+  padding: 12px 16px;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  min-width: 180px;
+}
+
+/* ✅ FIXED BUTTON (Text now visible) */
+.subscribe-form button {
+  background-color: var(-);
+  border: none;
+  color:var(--accent-orange);
+  font-weight: 600;
+  padding: 12px 25px 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+  background-color: #d95f00;
+}
+
+/* ✅ BOTTOM FOOTER */
+.main-footer {
+  background: #000;
+  padding: 20px 0;
+  color: #fff;
+  margin-top: 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.center-logo {
+  height: 40px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--accent-orange);
+}
+
+/* ✅ RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subscribe-box {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .subscribe-form {
+    width: 100%;
+  }
+
+  .footer-nav {
+    justify-content: center;
+  }
+}
+
+    
+    /* =======================================================
+       RESPONSIVE STYLES
+    ======================================================= */
+    @media (max-width: 1200px) {
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .realtor-title {
+        font-size: 2rem;
+      }
+      
+      .about-images .top-img,
+      .about-images .center-img,
+      .about-images .bottom-img {
+        width: 200px;
+        height: 150px;
+      }
+      
+      .footer-container,
+      .footer-inner {
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .footer-nav {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 10px 0;
+      }
+      
+      .navbar img {
+        width: 120px;
+      }
+      
+      .hero {
+        padding: 100px 0 40px;
+        text-align: center;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      
+      .consultation-box {
+        margin-top: 30px;
+        max-width: 100%;
+      }
+      
+      .realtor-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .realtor-images {
+        flex-direction: column;
+      }
+      
+      .about-images {
+        flex-direction: column;
+      }
+      
+      .about-images .top-img,
+      .about-images .center-img,
+      .about-images .bottom-img {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+      }
+      
+      .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .subscribe-box {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .subscribe-form {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .footer-inner {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+      
+      .realtor-title {
+        font-size: 1.8rem;
+      }
+      
+      .choose-us h2,
+      .projects h2,
+      .clients .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .cta-section h4 {
+        font-size: 1.4rem;
+      }
+    }
