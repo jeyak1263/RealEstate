@@ -14,34 +14,32 @@
         a {
             text-decoration: none;
         }
+.navbar {
+  transition: all 0.3s ease;
+}
 
-        .navbar {
-            padding: 15px 0;
-        }
+.navbar .nav-link {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-        .nav-link {
-            font-size: 16px;
-            font-weight: 500;
-            color: #000;
-            margin: 0 10px;
-        }
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #0d6efd; /* Bootstrap primary blue */
+}
 
-        .nav-link:hover,
-        .nav-link.active {
-            color: #007bff;
-        }
+.contact-btn {
+  background-color: #f75b00;
+  color: white;
+  transition: 0.3s;
+}
 
-        .btn-contact {
-            background: #007bff;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
-            transition: 0.3s;
-        }
+.contact-btn:hover {
+  background-color: #f75b00;
+  color: #fff;
+}
 
-        .btn-contact:hover {
-            background: #0056b3;
-        }
 
         .about-us-section {
             background: url("./assets/Mask group.png") center/cover no-repeat;

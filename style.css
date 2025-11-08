@@ -1,4 +1,4 @@
- :root {
+:root {
       --primary-blue: #0d2c6c;
       --secondary-blue: #2b7fff;
       --accent-orange: #ff7a00;
@@ -33,104 +33,132 @@
     /* =======================================================
        NAVBAR
     ======================================================= */
-   .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.nav-link {
-  font-weight: 500;
-  padding: 10px 15px;
-}
-
-.nav-link.active,
-.nav-link:hover {
-  color: #ff7b2e !important;
-}
-
-
+    .navbar {
+      padding: 10px 0;
+      transition: all 0.3s ease;
+    }
     
+    .navbar-light .navbar-toggler {
+      border: none;
+      padding: 4px 8px;
+    }
+    
+    .navbar-light .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    
+    .navbar-light .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(13, 44, 108, 0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      width: 24px;
+      height: 24px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      padding: 10px 15px !important;
+      color: var(--primary-blue) !important;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+      color: var(--accent-orange) !important;
+    }
+
+    .contact-btn {
+      background-color: var(--accent-orange);
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .contact-btn:hover {
+      background-color: #e65c00;
+      color: #fff;
+    }
+
     /* =======================================================
        HERO SECTION
     ======================================================= */
     .hero {
       position: relative;
-      background:url('./assets/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home\ 1.png') center/cover no-repeat;
+      background: linear-gradient(rgba(13, 44, 108, 0.7), rgba(13, 44, 108, 0.7)), 
+                  url('./assets/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home\ 1.png') center/cover no-repeat;
       min-height: 90vh;
       display: flex;
       align-items: center;
       color: var(--light-text);
       overflow: hidden;
-      padding-top: 80px;
-
+      padding-top: 100px;
+      padding-bottom: 60px;
     }
-    
+
     .hero-content {
       z-index: 1;
     }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--light-text);
+      margin-bottom: 20px;
+    }
+
+    /* Consultation Box */
+    .consultation-box {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(15, 38, 96, 0.9);
+      padding: 40px 30px;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+      margin: 0 auto;
+    }
+
+    .consultation-box h2 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    /* Input fields */
+    .input-field {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      margin-bottom: 18px;
+      background: transparent;
+      color: white;
+      font-size: 14px;
+    }
     
-   .hero {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-.hero h1{
-      font-size: 4.1rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--light-text);
-    margin-bottom: 20px;
+    .input-field::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
 
-}
-
-/* Consultation Box */
-.consultation-box {
-  width: 100%;
-  max-width: 380px;
-  background: #0f2660;
-  padding: 40px 35px;
-  border-radius: 10px;
-  text-align: center;
-  border: 8px solid rgba(255, 255, 255, 0.4);
-  color: white;
-  margin-top: 90px;
-}
-
-.consultation-box h2 {
-  font-size: 26px;
-  margin-bottom: 25px;
-  font-weight: 600;
-}
-
-/* Input fields */
-.input-field {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  margin-bottom: 18px;
-  background: transparent;
-  color: white;
-  font-size: 14px;
-}
-.input-field::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* Button */
-.consult-btn {
-  width: 100%;
-  background: #ff7b2e;
-  padding: 14px;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 500;
-}
-.consult-btn:hover {
-  background: #e0610f;
-}
+    /* Button */
+    .consult-btn {
+      width: 100%;
+      background: var(--accent-orange);
+      padding: 14px;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+    
+    .consult-btn:hover {
+      background: #e0610f;
+    }
 
     /* =======================================================
        REALTOR SECTION
@@ -139,35 +167,33 @@
       padding: 80px 0;
       background-color: var(--light-bg);
     }
-    
+
     .realtor-wrapper {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 40px;
-      background: url(./assets/Frame\ 17.png) center/cover no-repeat;
     }
-    
+
     .realtor-text {
       flex: 1;
       min-width: 300px;
     }
-    
+
     .realtor-title {
       color: var(--secondary-blue);
       font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
     }
-    
+
     .realtor-desc {
       font-size: 1.1rem;
       color: var(--dark-text);
-      line-height: 1.4;
-      padding-right: 35px;
+      line-height: 1.6;
     }
-    
+
     .realtor-images {
       flex: 1;
       display: flex;
@@ -175,34 +201,33 @@
       justify-content: center;
       gap: 20px;
       min-width: 300px;
-      
     }
-    
+
     .realtor-images .img {
       flex: 1;
     }
-    
+
     .realtor-images .img img {
       width: 100%;
-      max-width: 300px;
-      border-radius: 150px;
+      max-width: 280px;
+      border-radius: 50%;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     .realtor-images .img_two {
       flex: 1;
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-    
+
     .realtor-images .img_two img {
       width: 100%;
       max-width: 200px;
-      border-radius: 100px;
+      border-radius: 50%;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* =======================================================
        WHY CHOOSE US
     ======================================================= */
@@ -210,13 +235,13 @@
       padding: 80px 0;
       background-color: #fff;
     }
-    
+
     .choose-us h2 {
       font-weight: 700;
       color: var(--secondary-blue);
       margin-bottom: 15px;
     }
-    
+
     .underline {
       width: 120px;
       height: 6px;
@@ -224,22 +249,23 @@
       border-radius: 10px;
       margin: 0 auto 50px;
     }
-    
+
     .feature-box {
       background: #fff;
       border-radius: 15px;
-      padding: 30px 20px;
+      padding: 40px 25px;
       text-align: center;
       transition: all 0.3s ease;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       height: 100%;
+      margin-bottom: 20px;
     }
-    
+
     .feature-box:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     }
-    
+
     .feature-box .icon {
       background-color: rgba(43, 127, 255, 0.1);
       color: var(--secondary-blue);
@@ -251,63 +277,76 @@
       border-radius: 50%;
       margin: 0 auto 20px;
     }
-    
+
     .feature-box .icon img {
       width: 40px;
       height: 40px;
     }
-    
+
     .feature-box h4 {
       color: var(--secondary-blue);
       margin-bottom: 15px;
     }
-    
+
     .feature-box p {
       color: #666;
+      line-height: 1.6;
     }
-    
+
     /* =======================================================
        ABOUT US
     ======================================================= */
     .about-section {
       position: relative;
-      padding: 10px 52px 0px 52px;
-      background: url('./assets/Frame\ 16.png') center/cover no-repeat;
+      padding: 80px 0;
+      background: url('./assets/Frame\ 18.png') center/cover no-repeat;
       text-align: center;
     }
-    
+
     .about-images {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
       margin-bottom: 40px;
     }
+    
     .about-images img {
       border-radius: 10px;
       object-fit: cover;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
+    
+    .about-images img:hover {
+      transform: scale(1.03);
+    }
+    
     .about-images .top-img {
-      width: 250px;
-      height: 180px;
-    }
-    .about-images .center-img {
-      width: 300px;
-      height: 220px;
-    }
-    .about-images .bottom-img {
-      width: 250px;
+      width: 100%;
+      max-width: 250px;
       height: 180px;
     }
     
+    .about-images .center-img {
+      width: 100%;
+      max-width: 300px;
+      height: 220px;
+    }
+    
+    .about-images .bottom-img {
+      width: 100%;
+      max-width: 250px;
+      height: 180px;
+    }
+
     .about-section h2 {
       color: var(--secondary-blue);
       font-weight: 700;
       margin-bottom: 15px;
     }
-    
+
     .about-section .divider {
       width: 120px;
       height: 4px;
@@ -315,7 +354,7 @@
       margin: 0 auto 25px;
       border-radius: 2px;
     }
-    
+
     .about-section p {
       color: #555;
       font-size: 1rem;
@@ -323,61 +362,99 @@
       max-width: 800px;
       margin: 0 auto 40px;
     }
-    
+
     .about-btn {
       background-color: transparent;
       border: 2px solid var(--secondary-blue);
       color: var(--secondary-blue);
-      padding: 10px 35px;
+      padding: 12px 35px;
       border-radius: 30px;
       transition: 0.3s;
       text-decoration: none;
       display: inline-block;
       font-weight: 500;
     }
+    
     .about-btn:hover {
       background-color: var(--secondary-blue);
       color: #fff;
     }
+
     /* =======================================================
        PROJECTS
     ======================================================= */
- .projects {
-  padding: 80px 0;
-  text-align: center;
-}
+    .projects {
+      padding: 80px 0;
+      text-align: center;
+      background-color: var(--light-bg);
+    }
 
-.project-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-}
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
 
-.project-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
 
-.project-card:hover {
-  transform: translateY(-6px);
-}
+    .project-card .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
 
-.project-card .btn {
-  background: #ff7b2e;
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 6px;
-  display: inline-block;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
 
-.project-card .btn:hover {
-  background: #e0610f;
-}
+    .project-card .btn {
+      background: var(--accent-orange);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: inline-block;
+      text-decoration: none;
+      transition: 0.3s ease;
+      border: none;
+      margin-top: auto;
+      width: fit-content;
+      align-self: center;
+    }
+
+    .project-card .btn:hover {
+      background: #e0610f;
+    }
+
+    .carousel-control-prev, 
+    .carousel-control-next {
+      width: 40px;
+      height: 40px;
+      background-color: var(--secondary-blue);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.8;
+    }
+
+    .carousel-control-prev {
+      left: -20px;
+    }
+
+    .carousel-control-next {
+      right: -20px;
+    }
 
     /* =======================================================
        HAPPY CLIENTS
@@ -386,7 +463,7 @@
       padding: 80px 0;
       background-color: #fff;
     }
-    
+
     .clients .section-title {
       color: var(--secondary-blue);
       font-weight: 700;
@@ -394,332 +471,376 @@
       text-align: center;
       margin-bottom: 50px;
     }
-    
+
     .client-card {
       background: #fff;
       border-radius: 15px;
-      padding: 25px;
+      padding: 30px 25px;
       transition: all 0.3s ease;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       text-align: center;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
     }
-    
+
     .client-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
-    
+
     .client-card img {
       width: 80px;
       height: 80px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
       border: 3px solid var(--secondary-blue);
     }
-    
+
     .client-card p {
       font-size: 0.95rem;
       color: #555;
       margin-bottom: 20px;
       line-height: 1.6;
       font-style: italic;
+      flex-grow: 1;
     }
-    
+
     .client-name {
       color: var(--secondary-blue);
       font-weight: 600;
       font-size: 1.1rem;
       margin-bottom: 5px;
     }
-    
+
     .client-position {
       color: #777;
       font-size: 0.9rem;
     }
-    
+
     /* =======================================================
        BACKGROUND SECTION (Learn More)
     ======================================================= */
     .cta-section {
       position: relative;
-      background: linear-gradient( rgba(13, 44, 108, 0.8)), url('./assets/Mask\ group.png') center/cover no-repeat;
+      background: linear-gradient(rgba(13, 44, 108, 0.85), rgba(13, 44, 108, 0.85)), 
+                  url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 80px 0;
     }
-    
+
     .cta-section h4 {
       font-size: 2.3rem;
       margin-bottom: 30px;
       font-weight: 600;
+      line-height: 1.3;
     }
-    
+
     .cta-section .btn-light {
       background-color: #fff;
       border: none;
       color: var(--secondary-blue);
       font-weight: 600;
-      padding: 12px 75px;
+      padding: 12px 40px;
       border-radius: 5px;
       transition: 0.3s;
     }
-    
+
     .cta-section .btn-light:hover {
       background-color: var(--accent-orange);
       color: #fff;
     }
-    
+
     /* =======================================================
        FOOTER
     ======================================================= */
-   /* ✅ SUBSCRIBE FOOTER SECTION */
-.subscribe-footer {
-  background-color: var(--secondary-blue);
-  padding: 40px 0;
-  color: #fff;
-}
+    .subscribe-footer {
+      background: var(--primary-blue);
+      padding: 40px 0;
+      color: white;
+    }
 
-.footer-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    .footer-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
 
-/* ✅ NAV LINKS */
-.footer-nav {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-  padding: 10px 20px 10px 10px;
-}
+    /* Navigation Links */
+    .footer-nav {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
 
-.footer-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
+    .footer-nav a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
 
-.footer-nav a:hover {
-  color: var(--accent-orange);
-}
+    .footer-nav a:hover {
+      color: #fff;
+    }
 
-/* ✅ SUBSCRIBE BOX */
-.subscribe-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 20px;
-}
+    /* Subscribe Box */
+    .subs_box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+      padding: 10px 0;
+      width: 100%;
+      max-width: 500px;
+      gap: 20px;
+    }
 
-.subscribe-box span {
-  font-weight: 600;
-  font-size: 18px;
-  padding-right: 12px;
-}
+    /* Text */
+    .subs_box_p {
+      margin: 0;
+      color: #fff;
+      font-weight: 600;
+      font-size: 18px;
+      white-space: nowrap;
+    }
 
-/* ✅ FORM */
-.subscribe-form {
-  display: flex;
-  overflow: hidden;
-  border-radius: 30px;
-  background: #f39a0d;
-}
+    /* Input + Button Container */
+    .subscribe-input {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
 
-.subscribe-form input {
-  border: none;
-  padding: 12px 16px;
-  outline: none;
-  flex: 1;
-  font-size: 15px;
-  min-width: 180px;
-}
+    /* Input */
+    .subscribe-input input {
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 12px 15px;
+      border-radius: 8px;
+      color: white;
+      outline: none;
+      font-size: 14px;
+    }
 
-/* ✅ FIXED BUTTON (Text now visible) */
-.subscribe-form button {
-  background-color: var(-);
-  border: none;
-  color:var(--accent-orange);
-  font-weight: 600;
-  padding: 12px 25px 10px 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    /* Placeholder color */
+    .subscribe-input input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
 
-.subscribe-form button:hover {
-  background-color: #d95f00;
-}
+    /* Button */
+    .subscribe-button {
+      background-color: #fff;
+      color: var(--primary-blue);
+      border: none;
+      border-radius: 8px;
+      padding: 12px 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s ease;
+      white-space: nowrap;
+    }
 
-/* ✅ BOTTOM FOOTER */
-.main-footer {
-  background: #000;
-  padding: 20px 0;
-  color: #fff;
-  margin-top: 0;
-}
+    .subscribe-button:hover {
+      background-color: var(--accent-orange);
+      color: #fff;
+    }
 
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    /* Bottom Footer */
+    .main-footer {
+      background: #000;
+      padding: 25px 0;
+      color: #fff;
+    }
 
-.center-logo {
-  height: 40px;
-}
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
+    .center-logo {
+      height: 40px;
+    }
 
-.social-icons a {
-  color: #fff;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
 
-.social-icons a:hover {
-  color: var(--accent-orange);
-}
+    .social-icons a {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
 
-/* ✅ RESPONSIVE FIX */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
+    .social-icons a:hover {
+      color: var(--accent-orange);
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-  .subscribe-box {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
+    .social-icons img {
+      width: 18px;
+      height: 18px;
+      filter: brightness(0) invert(1);
+    }
 
-  .subscribe-form {
-    width: 100%;
-  }
-
-  .footer-nav {
-    justify-content: center;
-  }
-}
-
-    
     /* =======================================================
        RESPONSIVE STYLES
     ======================================================= */
     @media (max-width: 1200px) {
-      .hero-content h1 {
+      .hero h1 {
         font-size: 3rem;
       }
+      
+      .realtor-title {
+        font-size: 2.2rem;
+      }
     }
-    
+
     @media (max-width: 992px) {
-      .hero-content h1 {
+      .hero {
+        padding-top: 120px;
+        text-align: center;
+      }
+      
+      .hero h1 {
         font-size: 2.5rem;
+      }
+      
+      .consultation-box {
+        margin-top: 40px;
+      }
+      
+      .realtor-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+      }
+      
+      .realtor-images {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .realtor-desc {
+        padding-right: 0;
+      }
+      
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+      }
+      
+      .footer-nav {
+        justify-content: center;
+      }
+      
+      .subs_box {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      
+      .subscribe-input {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 8px 0;
+      }
+      
+      .navbar-brand img {
+        height: 35px;
+      }
+      
+      .hero {
+        padding: 120px 0 50px;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .consultation-box {
+        padding: 30px 20px;
       }
       
       .realtor-title {
         font-size: 2rem;
       }
       
-      .about-images .top-img,
-      .about-images .center-img,
-      .about-images .bottom-img {
-        width: 200px;
-        height: 150px;
-      }
-      
-      .footer-container,
-      .footer-inner {
-        justify-content: center;
-        text-align: center;
-      }
-      
-      .footer-nav {
-        justify-content: center;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .navbar {
-        padding: 10px 0;
-      }
-      
-      .navbar img {
-        width: 120px;
-      }
-      
-      .hero {
-        padding: 100px 0 40px;
-        text-align: center;
-      }
-      
-      .hero-content h1 {
-        font-size: 2.2rem;
-      }
-      
-      .consultation-box {
-        margin-top: 30px;
-        max-width: 100%;
-      }
-      
-      .realtor-wrapper {
-        flex-direction: column;
-        text-align: center;
-      }
-      
       .realtor-images {
         flex-direction: column;
+        gap: 30px;
+      }
+      
+      .realtor-images .img_two {
+        flex-direction: row;
+        justify-content: center;
       }
       
       .about-images {
-        flex-direction: column;
+        gap: 15px;
       }
       
       .about-images .top-img,
       .about-images .center-img,
       .about-images .bottom-img {
-        width: 100%;
-        max-width: 300px;
+        max-width: 100%;
         height: 200px;
       }
       
       .footer-nav {
         flex-direction: column;
-        gap: 10px;
-      }
-      
-      .subscribe-box {
-        flex-direction: column;
-        gap: 10px;
-      }
-      
-      .subscribe-form {
-        width: 100%;
-        max-width: 300px;
+        gap: 15px;
       }
       
       .footer-inner {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
+        text-align: center;
+      }
+      
+      .carousel-control-prev,
+      .carousel-control-next {
+        display: none;
+      }
+      
+      .cta-section h4 {
+        font-size: 1.8rem;
       }
     }
-    
+
     @media (max-width: 576px) {
-      .hero-content h1 {
+      .hero h1 {
         font-size: 1.8rem;
+      }
+      
+      .consultation-box h2 {
+        font-size: 22px;
       }
       
       .realtor-title {
@@ -733,6 +854,54 @@
       }
       
       .cta-section h4 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+      }
+      
+      .realtor-images .img img {
+        max-width: 220px;
+      }
+      
+      .realtor-images .img_two img {
+        max-width: 150px;
+      }
+      
+      .about-section {
+        padding: 60px 0;
+      }
+      
+      .feature-box {
+        padding: 30px 20px;
+      }
+      
+      .client-card,
+      .project-card {
+        padding: 25px 20px;
+      }
+      
+      .subscribe-button {
+        padding: 10px 10px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      
+      .consultation-box {
+        padding: 25px 15px;
+      }
+      
+      .input-field,
+      .consult-btn {
+        padding: 10px 12px;
+      }
+      
+      .footer-nav {
+        gap: 10px;
+      }
+      
+      .footer-nav a {
+        font-size: 14px;
       }
     }

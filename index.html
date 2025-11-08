@@ -14,68 +14,63 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
-<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <!-- =======================================================
+ <!-- =======================================================
        NAVBAR
   ======================================================= -->
-   <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
-  <div class="container">
+  <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/Frame 9 (2).png" alt="Real Trust Logo" height="45">
+      </a>
 
-    <a class="navbar-brand" href="#">
-      <img src="./assets/Frame 9 (2).png" alt="Logo" height="45">
-    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="./Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        </ul>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="./Home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
-      </ul>
-
-      <a href="#" class="btn btn-warning">Contact</a>
+        <a href="#contact" class="btn contact-btn">Contact</a>
+      </div>
     </div>
-
-  </div>
-</nav>
+  </nav>
 
   <!-- =======================================================
        HERO SECTION
   ======================================================= -->
-  <section class="hero py-5">
-  <div class="container">
-    <div class="row align-items-center">
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Text -->
+        <div class="col-lg-6 col-md-12 hero-content mb-4 mb-lg-0">
+          <h1>Consultation,<br>Design & Marketing</h1>
+        </div>
 
-      <!-- Left Text -->
-      <div class="col-lg-6 col-md-12 hero-content mb-4 mb-lg-0">
-        <h1>Consultation,<br>Design & Marketing</h1>
-      </div>
+        <!-- Right Form -->
+        <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+          <div class="consultation-box">
+            <h2 class="text-light">Get a Free Consultation</h2>
 
-      <!-- Right Form -->
-      <div class="col-lg-6 col-md-12 d-flex justify-content-center">
-        <div class="consultation-box">
-          <h2 class="text-light">Get a Free Consultation</h2>
+            <input type="text" class="input-field" placeholder="Full Name">
+            <input type="email" class="input-field" placeholder="Enter Email Address">
+            <input type="text" class="input-field" placeholder="Mobile Number">
+            <input type="text" class="input-field" placeholder="Area, City">
 
-          <input type="text" class="input-field" placeholder="Full Name">
-          <input type="email" class="input-field" placeholder="Enter Email Address">
-          <input type="text" class="input-field" placeholder="Mobile Number">
-          <input type="text" class="input-field" placeholder="Area, City">
-
-          <button class="consult-btn">Get Quick Quote</button>
+            <button class="consult-btn">Get Quick Quote</button>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- =======================================================
        REALTOR SECTION
@@ -83,13 +78,12 @@
   <section class="realtor-section">
     <div class="container">
       <div class="realtor-wrapper">
-
         <div class="realtor-text">
           <h1 class="realtor-title">Not Your Average Realtor</h1>
           <p class="realtor-desc">
             Real Trust has an eye for seeing property potential, coordinating top
             dollar on their sales, and delivering unmatched real estate solutions.
-            <br>
+            <br><br>
             Our team combines market expertise with innovative strategies to ensure
             your real estate journey is seamless and successful.
           </p>
@@ -105,7 +99,6 @@
             <img src="./assets/Ellipse 13.png" alt="Modern Home" />
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -122,7 +115,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="feature-box">
             <div class="icon">
-              <img src="./assets/home.png" alt="Home Icon">
+              <i class="fas fa-home fa-2x"></i>
             </div>
             <h4 class="fw-semibold">Potential ROI</h4>
             <p class="mt-3">
@@ -135,7 +128,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="feature-box">
             <div class="icon">
-              <img src="./assets/Group 1000001657.png" alt="Design Icon">
+              <i class="fas fa-pencil-alt fa-2x"></i>
             </div>
             <h4 class="fw-semibold">Design</h4>
             <p class="mt-3">
@@ -148,7 +141,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="feature-box">
             <div class="icon">
-              <img src="./assets/circle-dollar-sign.png" alt="Marketing Icon">
+              <i class="fas fa-chart-line fa-2x"></i>
             </div>
             <h4 class="fw-semibold">Marketing</h4>
             <p class="mt-3">
@@ -168,8 +161,8 @@
     <div class="container">
       <div class="about-images">
         <img src="./assets/Image.png" alt="Modern House" class="top-img">
-        <img src="./assets/Image (4).png" alt="Luxury Home" class="center-img">
-        <img src="./assets/Image (5).png" alt="Interior Design" class="bottom-img">
+        <img src="./assets/Image (5).png" alt="Luxury Home" class="center-img">
+        <img src="./assets/Image (4).png" alt="Interior Design" class="bottom-img">
       </div>
 
       <h2>About Us</h2>
@@ -185,66 +178,116 @@
        PROJECTS
   ======================================================= -->
   <section class="projects" id="projects">
-  <div class="container">
-    <h2 class="text-primary">Our Projects</h2>
-    <p class="section-desc">
-      We know what buyers are looking for and suggest projects that will bring clients top dollar for the sale of their homes.
-    </p>
+    <div class="container">
+      <h2 class="text-center text-primary p-2">Our Projects</h2>
+      <p class="section-desc text-center mb-5">
+        We know what buyers are looking for and suggest projects that will bring clients top dollar for the sale of their homes.
+      </p>
 
-    <div class="row g-4 justify-content-center">
-
-      <!-- Project 1 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="project-card">
-          <img src="./assets/Image.png" alt="Project 1">
-          <div class="card-body p-4">
-            <h5 class="text-primary">Consultation</h5>
-            <p>Project Name, Location</p>
-            <a href="#" class="btn">Read More</a>
+      <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="project-card">
+                  <img src="./assets/Image.png" alt="Project 1">
+                  <div class="card-body">
+                    <h6 class="text-primary">Consultation</h6>
+                    <p>Project Name, Location</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="project-card">
+                  <img src="./assets/Image (1).png" alt="Project 2">
+                  <div class="card-body">
+                    <h6 class="text-primary">Design</h6>
+                    <p>Project Name, Location</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="project-card">
+                  <img src="./assets/Image (2).png" alt="Project 3">
+                  <div class="card-body">
+                    <h6 class="text-primary">Marketing Design</h6>
+                    <p>Project Name, Location</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="project-card">
+                  <img src="./assets/Image (3).png" alt="Project 4">
+                  <div class="card-body">
+                    <h6 class="text-primary">Consultation & Marketing</h6>
+                    <p>Project Name, Location</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="project-card">
+                  <img src="./assets/Image (4).png" alt="Project 5">
+                  <div class="card-body">
+                    <h6 class="text-primary">Full Service</h6>
+                    <p>Project Name, Location</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="project-card">
+                  <img src="./assets/Image (5).png" alt="Project 6">
+                  <div class="card-body">
+                    <h6 class="text-primary">Design & Marketing</h6>
+                    <p>Project Name, Location</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="project-card">
+                  <img src="./assets/Image.png" alt="Project 7">
+                  <div class="card-body">
+                    <h6 class="text-primary">Consultation</h6>
+                    <p>Project Name, Location</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="project-card">
+                  <img src="./assets/Image (3).png" alt="Project 8">
+                  <div class="card-body">
+                    <h6 class="text-primary">Marketing</h6>
+                    <p>Project Name, Location</p>
+                    <a href="#" class="btn btn-warning">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="project-card">
-          <img src="./assets/Image (2).png" alt="Project 2">
-          <div class="card-body p-4">
-            <h5 class="text-primary">Design</h5>
-            <p>Project Name, Location</p>
-            <a href="#" class="btn">Read More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="project-card">
-          <img src="./assets/Image (3).png" alt="Project 3">
-          <div class="card-body p-4">
-            <h5 class="text-primary">Marketing Design</h5>
-            <p>Project Name, Location</p>
-            <a href="#" class="btn">Read More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="col-lg-3 col-md-6">
-        <div class="project-card">
-          <img src="./assets/Image (4).png" alt="Project 4">
-          <div class="card-body p-4">
-            <h5 class="text-primary">Consultation & Marketing</h5>
-            <p>Project Name, Location</p>
-            <a href="#" class="btn">Read More</a>
-          </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- =======================================================
        HAPPY CLIENTS
@@ -256,7 +299,7 @@
       <div class="row mt-5 g-4">
         <div class="col-lg-3 col-md-6">
           <div class="client-card">
-            <img src="./assets/Image (1).png" alt="Client 1">
+            <img src="./assets/Ellipse 28.png" alt="Client 1">
             <p>"Working with Real Trust was an exceptional experience. They helped us find our dream home within our budget and made the entire process smooth."</p>
             <h4 class="client-name">Rowhan Smith</h4>
             <strong class="client-position">- Rakesh Jain</strong>
@@ -265,7 +308,7 @@
 
         <div class="col-lg-3 col-md-6">
           <div class="client-card">
-            <img src="./assets/Image (2).png" alt="Client 2">
+            <img src="./assets/Ellipse 29.png" alt="Client 2">
             <p>"The team at Real Trust provided excellent guidance throughout our home selling process. Their marketing strategy got us multiple offers above asking price."</p>
             <h4 class="client-name">Shipara Kayak</h4>
             <strong class="client-position">- Priya Mehta</strong>
@@ -274,7 +317,7 @@
 
         <div class="col-lg-3 col-md-6">
           <div class="client-card">
-            <img src="./assets/Image (3).png" alt="Client 3">
+            <img src="./assets/Ellipse 31.png" alt="Client 3">
             <p>"As a first-time home buyer, I was nervous about the process. Real Trust made everything understandable and helped me find the perfect starter home."</p>
             <h4 class="client-name">John Lepore</h4>
             <strong class="client-position">- Arjun Nair</strong>
@@ -283,7 +326,7 @@
 
         <div class="col-lg-3 col-md-6">
           <div class="client-card">
-            <img src="./assets/Image (4).png" alt="Client 4">
+            <img src="./assets/Ellipse 33.png" alt="Client 4">
             <p>"Their design consultation completely transformed our property. We sold our home in just 2 weeks for 15% above the initial valuation."</p>
             <h4 class="client-name">Marry Freeman</h4>
             <strong class="client-position">- Sneha Rao</strong>
@@ -304,7 +347,7 @@
   </section>
 
   <!-- =======================================================
-FOOTER
+       FOOTER
   ======================================================= -->
   <footer class="subscribe-footer" id="contact">
     <div class="container">
@@ -318,15 +361,12 @@ FOOTER
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <!-- Subscribe Box -->
-        <div class="subscribe-box- ms-left">
-          <span class="text-center">Subscribe Us</span>
-          <form class="subscribe-form">
+        <div class="subs_box">
+          <p class="subs_box_p">Subscribe Us</p>
+          <div class="subscribe-input">
             <input type="email" placeholder="Enter Email Address" required>
-            <button type="logo">
-              <img src="./assets/ic Arrow Go.png" alt="">
-            </button>
-          </form>
+            <button class="subscribe-button">Submit</button>
+          </div>
         </div>
       </div>
     </div>
@@ -337,7 +377,7 @@ FOOTER
     <div class="container">
       <div class="footer-inner">
         <p>All Rights Reserved 2025</p>
-        <img src="assets/Frame 10 (1).png" alt="Real Trust Logo" class="center-logo" />
+        <img src="./assets/Frame 10 (1).png" alt="Real Trust Logo" class="center-logo" />
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -350,6 +390,5 @@ FOOTER
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
