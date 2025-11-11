@@ -472,13 +472,19 @@
     .carousel-control-next {
       right: -20px;
     }
+ /* =======================================================
+         :root {
+      --secondary-blue: #1259c4;
+      --accent-orange: #f9a825;
+    }
 
-    /* =======================================================
-       HAPPY CLIENTS
-    ======================================================= */
+    /* ============================
+       HAPPY CLIENTS SECTION
+    ============================ */
     .clients {
       padding: 80px 0;
       background-color: #fff;
+      position: relative;
     }
 
     .clients .section-title {
@@ -499,7 +505,8 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      margin-bottom: 30px;
+      margin: 0 auto;
+      max-width: 300px;
     }
 
     .client-card:hover {
@@ -537,6 +544,95 @@
       font-size: 0.9rem;
     }
 
+    /* --- Carousel indicators --- */
+    .carousel-indicators {
+      bottom: -60px;
+    }
+
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--secondary-blue);
+      opacity: 0.5;
+    }
+
+    .carousel-indicators button.active {
+      opacity: 1;
+    }
+
+    /* --- Always visible controls --- */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 50px;
+      opacity: 1 !important;
+      z-index: 5;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: var(--secondary-blue);
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    /* --- Default white arrow SVGs --- */
+    .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    }
+
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+
+    /* --- Hover effects --- */
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+      background-color: var(--accent-orange);
+      transform: scale(1.1);
+    }
+
+    /* --- Responsive scaling --- */
+    @media (max-width: 992px) { /* lg */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 768px) { /* md */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 40px;
+      }
+    }
+
+    @media (max-width: 576px) { /* sm/xs */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .carousel-control-prev {
+        left: 5px;
+      }
+      .carousel-control-next {
+        right: 5px;
+      }
+    }
     /* =======================================================
        BACKGROUND SECTION (Learn More)
     ======================================================= */
@@ -1200,50 +1296,99 @@
   <!-- =======================================================
        HAPPY CLIENTS
   ======================================================= -->
-  <section class="clients py-5" id="testimonials">
-    <div class="container text-center">
-      <h2 class="section-title">Happy Clients</h2>
-
-      <div class="row mt-5 g-4">
-        <div class="col-lg-3 col-md-6">
-          <div class="client-card">
-            <img src="./assets/Ellipse 28.png" alt="Client 1">
-            <p>"Working with Real Trust was an exceptional experience. They helped us find our dream home within our budget and made the entire process smooth."</p>
-            <h4 class="client-name">Rowhan Smith</h4>
-            <strong class="client-position">- Rakesh Jain</strong>
-          </div>
+      <!-- Happy Clients Section -->
+    <section class="clients py-5" id="testimonials">
+        <div class="container text-center">
+            <h2 class="section-title">Happy Clients</h2>
+            
+                 <!-- Testimonials Carousel -->
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-lg-3 col-md-12">
+                                <div class="client-card">
+                                    <img src="./assets/Ellipse 28.png" alt="Client 1">
+                                    <p>"Working with Real Trust was an exceptional experience. They helped us find our dream home within our budget and made the entire process smooth."</p>
+                                    <h4 class="client-name">Rowhan Smith</h4>
+                                    <strong class="client-position">- Rakesh Jain</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="client-card">
+                                    <img src="./assets/Ellipse 29.png" alt="Client 2">
+                                    <p>"The team at Real Trust provided excellent guidance throughout our home selling process. Their marketing strategy got us multiple offers above asking price."</p>
+                                    <h4 class="client-name">Shipara Kayak</h4>
+                                    <strong class="client-position">- Priya Mehta</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="client-card">
+                                    <img src="./assets/Ellipse 31.png" alt="Client 3">
+                                    <p>"As a first-time home buyer, I was nervous about the process. Real Trust made everything understandable and helped me find the perfect starter home."</p>
+                                    <h4 class="client-name">John Lepore</h4>
+                                    <strong class="client-position">- Arjun Nair</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="client-card">
+                                    <img src="./assets/Ellipse 33.png" alt="Client 4">
+                                    <p>"Their design consultation completely transformed our property. We sold our home in just 2 weeks for 15% above the initial valuation."</p>
+                                    <h4 class="client-name">Marry Freeman</h4>
+                                    <strong class="client-position">- Sneha Rao</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls - Now properly visible on mobile -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators mt-4">
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="client-card">
-            <img src="./assets/Ellipse 29.png" alt="Client 2">
-            <p>"The team at Real Trust provided excellent guidance throughout our home selling process. Their marketing strategy got us multiple offers above asking price."</p>
-            <h4 class="client-name">Shipara Kayak</h4>
-            <strong class="client-position">- Priya Mehta</strong>
-          </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h4>Ready to Find Your Dream Home?</h4>
+            <button class="btn btn-light">Learn More</button>
         </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="client-card">
-            <img src="./assets/Ellipse 31.png" alt="Client 3">
-            <p>"As a first-time home buyer, I was nervous about the process. Real Trust made everything understandable and helped me find the perfect starter home."</p>
-            <h4 class="client-name">John Lepore</h4>
-            <strong class="client-position">- Arjun Nair</strong>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="client-card">
-            <img src="./assets/Ellipse 33.png" alt="Client 4">
-            <p>"Their design consultation completely transformed our property. We sold our home in just 2 weeks for 15% above the initial valuation."</p>
-            <h4 class="client-name">Marry Freeman</h4>
-            <strong class="client-position">- Sneha Rao</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+    </section>
   <!-- =======================================================
        BACKGROUND SECTION
   ======================================================= -->

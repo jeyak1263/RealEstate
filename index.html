@@ -1,23 +1,23 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Real Trust - Consultation, Design & Marketing</title>
-  
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css">
-</head> 
+</head>
 <body>
- <!-- =======================================================
-       NAVBAR
+<!-- =======================================================
+    NAVBAR
   ======================================================= -->
   <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
     <div class="container">
@@ -43,7 +43,7 @@
   </nav>
 
   <!-- =======================================================
-       HERO SECTION
+      HERO SECTION
   ======================================================= -->
   <section class="hero">
     <div class="container">
@@ -71,7 +71,7 @@
   </section>
 
   <!-- =======================================================
-       REALTOR SECTION
+      REALTOR SECTION
   ======================================================= -->
   <section class="realtor-section">
     <div class="container">
@@ -102,7 +102,7 @@
   </section>
 
   <!-- =======================================================
-       WHY CHOOSE US
+      WHY CHOOSE US
   ======================================================= -->
   <section class="choose-us py-5 text-center" id="services">
     <div class="container">
@@ -153,7 +153,7 @@
   </section>
 
   <!-- =======================================================
-       ABOUT US
+      ABOUT US
   ======================================================= -->
   <section class="about-section">
     <div class="container">
@@ -173,7 +173,7 @@
   </section>
 
   <!-- =======================================================
-       PROJECTS
+    PROJECTS
   ======================================================= -->
   <section class="projects" id="projects">
     <div class="container">
@@ -287,55 +287,96 @@
     </div>
   </section>
 
-  <!-- =======================================================
-       HAPPY CLIENTS
-  ======================================================= -->
+  <!-- ============================
+       HAPPY CLIENTS SECTION
+  ============================ -->
   <section class="clients py-5" id="testimonials">
     <div class="container text-center">
       <h2 class="section-title">Happy Clients</h2>
 
-      <div class="row mt-5 g-4">
-        <div class="col-lg-3 col-md-6">
-          <div class="client-card">
-            <img src="./assets/Ellipse 28.png" alt="Client 1">
-            <p>"Working with Real Trust was an exceptional experience. They helped us find our dream home within our budget and made the entire process smooth."</p>
-            <h4 class="client-name">Rowhan Smith</h4>
-            <strong class="client-position">- Rakesh Jain</strong>
+      <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-12">
+                <div class="client-card">
+                  <img src="./assets/Ellipse 28.png" alt="Client 1">
+                  <p>"Working with Real Trust was an exceptional experience. They helped us find our dream home within our budget and made the entire process smooth."</p>
+                  <h4 class="client-name">Rowhan Smith</h4>
+                  <strong class="client-position">- Rakesh Jain</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="client-card">
+                  <img src="./assets/Ellipse 29.png" alt="Client 2">
+                  <p>"The team at Real Trust provided excellent guidance throughout our home selling process. Their marketing strategy got us multiple offers above asking price."</p>
+                  <h4 class="client-name">Shipara Kayak</h4>
+                  <strong class="client-position">- Priya Mehta</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="client-card">
+                  <img src="./assets/Ellipse 31.png" alt="Client 3">
+                  <p>"As a first-time home buyer, I was nervous about the process. Real Trust made everything understandable and helped me find the perfect starter home."</p>
+                  <h4 class="client-name">John Lepore</h4>
+                  <strong class="client-position">- Arjun Nair</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-6">
+                <div class="client-card">
+                  <img src="./assets/Ellipse 33.png" alt="Client 4">
+                  <p>"Their design consultation completely transformed our property. We sold our home in just 2 weeks for 15% above the initial valuation."</p>
+                  <h4 class="client-name">Marry Freeman</h4>
+                  <strong class="client-position">- Sneha Rao</strong>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="client-card">
-            <img src="./assets/Ellipse 29.png" alt="Client 2">
-            <p>"The team at Real Trust provided excellent guidance throughout our home selling process. Their marketing strategy got us multiple offers above asking price."</p>
-            <h4 class="client-name">Shipara Kayak</h4>
-            <strong class="client-position">- Priya Mehta</strong>
-          </div>
-        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="client-card">
-            <img src="./assets/Ellipse 31.png" alt="Client 3">
-            <p>"As a first-time home buyer, I was nervous about the process. Real Trust made everything understandable and helped me find the perfect starter home."</p>
-            <h4 class="client-name">John Lepore</h4>
-            <strong class="client-position">- Arjun Nair</strong>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="client-card">
-            <img src="./assets/Ellipse 33.png" alt="Client 4">
-            <p>"Their design consultation completely transformed our property. We sold our home in just 2 weeks for 15% above the initial valuation."</p>
-            <h4 class="client-name">Marry Freeman</h4>
-            <strong class="client-position">- Sneha Rao</strong>
-          </div>
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators mt-4">
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =======================================================
-       BACKGROUND SECTION
+      BACKGROUND SECTION
   ======================================================= -->
   <section class="cta-section">
     <div class="container">
@@ -345,7 +386,7 @@
   </section>
 
   <!-- =======================================================
-       FOOTER
+      FOOTER
   ======================================================= -->
   <footer class="subscribe-footer" id="contact">
     <div class="container">
@@ -390,4 +431,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
   </html>
-    
