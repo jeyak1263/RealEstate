@@ -1,319 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Clients Slider</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #f39c12;
+            --light-bg: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .projects {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
 
-  <!-- Swiper CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Section Styling */
-    .clients {
-      padding: 80px 0;
-      background: linear-gradient(135deg, #f5f7ff 0%, #e6eeff 100%);
-      text-align: center;
-      position: relative;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #1259c4;
-      margin-bottom: 10px;
-      position: relative;
-      display: inline-block;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      width: 60%;
-      height: 4px;
-      background: linear-gradient(to right, #1259c4, #4a90e2);
-      bottom: -10px;
-      left: 20%;
-      border-radius: 2px;
-    }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 50px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    swiper-container {
-      width: 100%;
-      max-width: 900px;
-      height: auto;
-      margin: auto;
-      position: relative;
-      padding: 20px 0 60px;
-    }
-
-    swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 0;
-    }
-
-    .client-card {
-      background-color: #fff;
-      border-radius: 16px;
-      padding: 40px 30px;
-      text-align: center;
-      max-width: 380px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      margin: auto;
-      transition: all 0.4s ease;
-      position: relative;
-      border: 1px solid #eaeaea;
-    }
-
-    .client-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-    }
-
-    .client-card::before {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      font-size: 60px;
-      color: #1259c4;
-      opacity: 0.1;
-      font-family: Georgia, serif;
-    }
-
-    .client-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 4px solid #e6eeff;
-      object-fit: cover;
-      transition: all 0.3s ease;
-    }
-
-    .client-card:hover img {
-      border-color: #1259c4;
-      transform: scale(1.05);
-    }
-
-    .client-card p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
-      line-height: 1.7;
-      font-style: italic;
-      position: relative;
-      z-index: 1;
-    }
-
-    .client-name {
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 5px;
-      font-size: 1.2rem;
-    }
-
-    .client-position {
-      font-size: 0.9rem;
-      color: #777;
-      display: block;
-      margin-bottom: 15px;
-    }
-
-    .rating {
-      color: #ffc107;
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-
-    /* Pagination dots */
-    .swiper-pagination {
-      bottom: 0 !important;
-    }
-
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background-color: #c4d4f0;
-      opacity: 1;
-      transition: all 0.3s ease;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: #1259c4;
-      transform: scale(1.2);
-    }
-
-    /* Arrows styling */
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: #fff;
-      background-color: #1259c4;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s;
-      box-shadow: 0 4px 10px rgba(18, 89, 196, 0.3);
-    }
-
-    .swiper-button-prev:hover,
-    .swiper-button-next:hover {
-      background-color: #0d47a7;
-      transform: scale(1.1);
-    }
-
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    /* Responsive styles */
-    @media (max-width: 768px) {
-      .section-title {
-        font-size: 2rem;
-      }
-      
-      .client-card {
-        padding: 30px 20px;
-        max-width: 320px;
-      }
-      
-      swiper-container {
-        padding: 10px 0 50px;
-      }
-      
-      .swiper-button-prev,
-      .swiper-button-next {
-        display: none;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .clients {
-        padding: 60px 0;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .section-subtitle {
-        font-size: 1rem;
-        padding: 0 20px;
-      }
-      
-      .client-card {
-        padding: 25px 15px;
-        max-width: 280px;
-      }
-      
-      .client-card img {
-        width: 80px;
-        height: 80px;
-      }
-    }
-  </style>
+        .section-desc {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .card-body h6 {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .card-body p {
+            color: #777;
+            margin-bottom: 20px;
+        }
+        
+        .btn-warning {
+            background-color: var(--secondary-color);
+            border: none;
+            color: white;
+            font-weight: 500;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-warning:hover {
+            background-color: #e67e22;
+            color: white;
+        }
+        
+        .view-all-btn {
+            display: block;
+            margin: 50px auto 0;
+            padding: 12px 40px;
+            font-size: 1.1rem;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .view-all-btn:hover {
+            background-color: #1a252f;
+        }
+        
+        @media (max-width: 992px) {
+            .projects {
+                padding: 60px 0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- PROJECTS SECTION -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="text-center text-primary p-2">Our Projects</h2>
+            <p class="section-desc text-center mb-5">
+                We know what buyers are looking for and suggest projects that will bring clients top dollar for the sale of their homes.
+            </p>
 
-  <!-- ============================
-        HAPPY CLIENTS SECTION
-  ============================ -->
-  <section class="clients" id="testimonials">
-    <div class="container text-center">
-      <h2 class="section-title">Happy Clients</h2>
-      <p class="section-subtitle">Discover what our clients have to say about their experience working with us</p>
+            <div class="row justify-content-center">
+                <!-- Project 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="project-card">
+                        <img src="./assets/Image.png" alt="Modern House">
+                        <div class="card-body">
+                            <h6 class="text-primary">Consultation</h6>
+                            <p>Modern Villa, Beverly Hills</p>
+                            <a href="#" class="btn btn-warning">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="project-card">
+                        <img src="./assets/Image (1).png" alt="Luxury Apartment">
+                        <div class="card-body">
+                            <h6 class="text-primary">Design</h6>
+                            <p>Luxury Apartment, New York</p>
+                            <a href="#" class="btn btn-warning">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Contemporary Home">
+                        <div class="card-body">
+                            <h6 class="text-primary">Marketing Design</h6>
+                            <p>Contemporary Home, Miami</p>
+                            <a href="#" class="btn btn-warning">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Suburban House">
+                        <div class="card-body">
+                            <h6 class="text-primary">Consultation & Marketing</h6>
+                            <p>Suburban House, Chicago</p>
+                            <a href="#" class="btn btn-warning">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn btn-primary view-all-btn">View All Projects</button>
+            </div>
+        </div>
+    </section>
 
-      <swiper-container
-        slides-per-view="1"
-        loop="true"
-        speed="800"
-        autoplay-delay="4000"
-        pagination="true"
-        pagination-clickable="true"
-        navigation="true"
-      >
-        <!-- Slide 1 -->
-        <swiper-slide>
-          <div class="client-card">
-            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Client 1">
-            <div class="rating">★★★★★</div>
-            <p>"Working with Real Trust was an exceptional experience. They helped us find our dream home within our budget and made the entire process smooth."</p>
-            <h4 class="client-name">Rowhan Smith</h4>
-            <strong class="client-position">- Rakesh Jain</strong>
-          </div>
-        </swiper-slide>
-
-        <!-- Slide 2 -->
-        <swiper-slide>
-          <div class="client-card">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Client 2">
-            <div class="rating">★★★★★</div>
-            <p>"The team at Real Trust provided excellent guidance throughout our home selling process. Their marketing strategy got us multiple offers above asking price."</p>
-            <h4 class="client-name">Shipara Kayak</h4>
-            <strong class="client-position">- Priya Mehta</strong>
-          </div>
-        </swiper-slide>
-
-        <!-- Slide 3 -->
-        <swiper-slide>
-          <div class="client-card">
-            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Client 3">
-            <div class="rating">★★★★☆</div>
-            <p>"As a first-time home buyer, I was nervous about the process. Real Trust made everything understandable and helped me find the perfect starter home."</p>
-            <h4 class="client-name">John Lepore</h4>
-            <strong class="client-position">- Arjun Nair</strong>
-          </div>
-        </swiper-slide>
-
-        <!-- Slide 4 -->
-        <swiper-slide>
-          <div class="client-card">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Client 4">
-            <div class="rating">★★★★★</div>
-            <p>"Their design consultation completely transformed our property. We sold our home in just 2 weeks for 15% above the initial valuation."</p>
-            <h4 class="client-name">Marry Freeman</h4>
-            <strong class="client-position">- Sneha Rao</strong>
-          </div>
-        </swiper-slide>
-      </swiper-container>
-    </div>
-  </section>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
