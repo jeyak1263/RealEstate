@@ -458,168 +458,230 @@
     .carousel-control-next {
       right: -20px;
     }
-
-   /* ============================
-       HAPPY CLIENTS SECTION
-    ============================ */
+/* Section Styling */
     .clients {
       padding: 80px 0;
-      background-color: #fff;
+      background: linear-gradient(135deg, #f5f7ff 0%, #e6eeff 100%);
+      text-align: center;
       position: relative;
     }
 
-    .clients .section-title {
-      color: var(--secondary-blue);
+    .section-title {
+      font-size: 2.5rem;
       font-weight: 700;
-      font-size: 2.2rem;
-      text-align: center;
+      color: #1259c4;
+      margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 4px;
+      background: linear-gradient(to right, #1259c4, #4a90e2);
+      bottom: -10px;
+      left: 20%;
+      border-radius: 2px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #666;
       margin-bottom: 50px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    swiper-container {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: auto;
+      position: relative;
+      padding: 20px 0 60px;
+    }
+
+    swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
     }
 
     .client-card {
-      background: #fff;
-      border-radius: 15px;
-      padding: 30px 25px;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 40px 30px;
       text-align: center;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      max-width: 300px;
+      max-width: 380px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin: auto;
+      transition: all 0.4s ease;
+      position: relative;
+      border: 1px solid #eaeaea;
     }
 
     .client-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .client-card::before {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 60px;
+      color: #1259c4;
+      opacity: 0.1;
+      font-family: Georgia, serif;
     }
 
     .client-card img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      margin: 0 auto 20px;
-      border: 3px solid var(--secondary-blue);
-    }
-
-    .client-card p {
-      font-size: 0.95rem;
-      color: #555;
       margin-bottom: 20px;
-      line-height: 1.6;
-      font-style: italic;
-      flex-grow: 1;
-    }
-
-    .client-name {
-      color: var(--secondary-blue);
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-    }
-
-    .client-position {
-      color: #777;
-      font-size: 0.9rem;
-    }
-
-    /* --- Carousel indicators --- */
-    .carousel-indicators {
-      bottom: -60px;
-    }
-
-    .carousel-indicators button {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: var(--secondary-blue);
-      opacity: 0.5;
-    }
-
-    .carousel-indicators button.active {
-      opacity: 1;
-    }
-
-    /* --- Always visible controls --- */
-    .carousel-control-prev,
-    .carousel-control-next {
-      width: 50px;
-      opacity: 1 !important;
-      z-index: 5;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      display: inline-block;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background-color: var(--secondary-blue);
-      background-size: 50%;
-      background-repeat: no-repeat;
-      background-position: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      border: 4px solid #e6eeff;
+      object-fit: cover;
       transition: all 0.3s ease;
     }
 
-    /* --- Default white arrow SVGs --- */
-    .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    .client-card:hover img {
+      border-color: #1259c4;
+      transform: scale(1.05);
     }
 
-    .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    .client-card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.7;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
     }
 
-    /* --- Hover effects --- */
-    .carousel-control-prev:hover .carousel-control-prev-icon,
-    .carousel-control-next:hover .carousel-control-next-icon {
-      background-color: var(--accent-orange);
+    .client-name {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
+    .client-position {
+      font-size: 0.9rem;
+      color: #777;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .rating {
+      color: #ffc107;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    /* Pagination dots - Enhanced positioning and styling */
+    .swiper-pagination {
+      bottom: 0 !important;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 0;
+    }
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #c4d4f0;
+      opacity: 1;
+      transition: all 0.3s ease;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #1259c4;
+      transform: scale(1.2);
+      box-shadow: 0 0 0 2px rgba(18, 89, 196, 0.2);
+    }
+
+    /* Arrows styling */
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #fff;
+      background-color: #1259c4;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(18, 89, 196, 0.3);
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      background-color: #0d47a7;
       transform: scale(1.1);
     }
-    .carousel-control-prev,
-.carousel-control-next {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-}
 
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-    /* --- Responsive scaling --- */
-    @media (max-width: 992px) { /* lg */
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        width: 40px;
-        height: 40px;
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .client-card {
+        padding: 30px 20px;
+        max-width: 320px;
+      }
+      
+      swiper-container {
+        padding: 10px 0 50px;
+      }
+      
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
       }
     }
 
-    
-    @media (max-width: 768px) { /* md */
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        width: 35px;
-        height: 35px;
+    @media (max-width: 480px) {
+      .clients {
+        padding: 60px 0;
       }
-      .carousel-control-prev,
-      .carousel-control-next {
-        width: 40px;
+      
+      .section-title {
+        font-size: 1.8rem;
       }
-    }
-
-    @media (max-width: 576px) { /* sm/xs */
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        width: 30px;
-        height: 30px;
+      
+      .section-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
       }
-      .carousel-control-prev {
-        left: 5px;
+      
+      .client-card {
+        padding: 25px 15px;
+        max-width: 280px;
       }
-      .carousel-control-next {
-        right: 5px;
+      
+      .client-card img {
+        width: 80px;
+        height: 80px;
       }
     }
     /* =======================================================
